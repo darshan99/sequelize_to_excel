@@ -1,7 +1,5 @@
 # Sequelize to Excel
 
-# [](#introduction) Introduction
-
 Why Should I Use This?
 ----------------------
 
@@ -9,18 +7,17 @@ This library is intended to extract column names , field names , table name and 
 
 The excel will help you to have sneak peak of complete file at once , along with the corresponding database field name
 
-# [](#setup) Set up
 
 Installation
 ------------
 
 .. code-block:: console
 
-```
-pip install sequelize-to-excel
-```
+    pip install sequelize-to-excel
 
-# [](#Output) Output
+
+Using Sequelize to Excel
+------------------------
 
 you will find the generate excel file in the same folder .
 Make sure you provide the input file preferrably in the same folder.
