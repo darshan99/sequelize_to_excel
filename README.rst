@@ -2,11 +2,19 @@
 
 # [](#introduction) Introduction
 
+Why Should I Use This?
+----------------------
+
 This library is intended to extract column names , field names , table name and other information from your node model file developed in standard Sequelize format
 
 The excel will help you to have sneak peak of complete file at once , along with the corresponding database field name
 
 # [](#setup) Set up
+
+Installation
+------------
+
+.. code-block:: console
 
 ```
 pip install sequelize-to-excel
