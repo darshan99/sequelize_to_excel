@@ -20,10 +20,11 @@ Using SequelizeToExcel
 ----------------------
 
 1. Import the package and call the method from initalize object
-    .. code-block:: console
-        # from sequelize_to_excel import SequelizeToExcel
-        # objSeq = SequelizeToExcel()
-        # objSeq.extract_and_export()
+.. code-block:: console
+    from sequelize_to_excel import SequelizeToExcel
+    objSeq = SequelizeToExcel()
+    objSeq.extract_and_export()
 
 2. you will find the generate excel file in the same folder .
     Make sure you provide the input file preferrably in the same folder.
+
