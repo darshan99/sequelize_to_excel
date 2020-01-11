@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='sequelize_to_excel',
-    version='1.0.1',
+    version='1.0.3',
     py_modules=['sequelize_to_excel'],
     author='Darshan Bharat',
     author_email='mailshahdarshan@gmail.com',
