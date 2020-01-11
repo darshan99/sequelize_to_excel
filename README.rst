@@ -16,6 +16,15 @@ Installation
     pip install sequelize-to-excel
 
 
+Using SequelizeToExcel
+----------------------
+
+.. code-block:: console
+    from sequelize_to_excel import SequelizeToExcel
+    objSeq = SequelizeToExcel()
+    objSeq.extract_and_export()
+
+
 Using Sequelize to Excel
 ------------------------
 
