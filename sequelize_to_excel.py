@@ -99,8 +99,3 @@ class SequelizeToExcel(object):
             logging.error(" attributes in the model are unknown ",stack_info=True)
         except Exception as e:
             logging.error(e)
-
-if __name__ == "__main__":
-    sobj = SequelizeToExcel("address")
-    sobj.extract_and_export()
-    pass

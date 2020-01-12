@@ -7,6 +7,7 @@ This library is intended to extract column names , field names , table name and 
 
 The excel will help you to have sneak peak of complete file at once , along with the corresponding database field name
 
+This can also be used as standalone app , as well as library
 
 Installation
 ------------
@@ -24,7 +25,7 @@ Using SequelizeToExcel
 .. code-block:: console
 
     from sequelize_to_excel import SequelizeToExcel
-    objSeq = SequelizeToExcel()
+    objSeq = SequelizeToExcel("<filename>")
     objSeq.extract_and_export()
 
 2. you will find the generate excel file in the same folder .
