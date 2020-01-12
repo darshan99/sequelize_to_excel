@@ -70,7 +70,7 @@ class SequelizeToExcel(object):
 
             listRows = []
             # defines excel header and maps value
-            lstColumnHeader = ["name","type","allowNull","primaryKey","autoIncrement","field","defaultValue","references","tableName","version"]
+            lstColumnHeader = ["name","type","allowNull","primaryKey","autoIncrement","field","defaultValue","references.model","references.key","tableName","version"]
             for (k,v) in jsonObj[0].items():
                 listColumns = []
                 listColumns.append(k)
@@ -80,7 +80,13 @@ class SequelizeToExcel(object):
                 listColumns.append(v.get("autoIncrement","na"))
                 listColumns.append(v.get("field","na"))
                 listColumns.append(v.get("defaultValue","na"))
-                listColumns.append(v.get("references","na"))
+                #listColumns.append(v.get("references","na"))
+                if v.get("references","na") != "na":
+                    listColumns.append(v.get("references").get("model","na"))
+                    listColumns.append(v.get("references").get("key","na"))
+                else:
+                    listColumns.append("na")
+                    listColumns.append("na")
                 listColumns.append(jsonObj[1].get("tableName","na"))
                 listColumns.append(jsonObj[1].get("version","na"))
                 listRows.append(listColumns)
@@ -93,3 +99,8 @@ class SequelizeToExcel(object):
             logging.error(" attributes in the model are unknown ",stack_info=True)
         except Exception as e:
             logging.error(e)
+
+if __name__ == "__main__":
+    sobj = SequelizeToExcel("address")
+    sobj.extract_and_export()
+    pass
