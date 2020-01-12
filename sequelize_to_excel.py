@@ -25,6 +25,10 @@ import logging
 from pandas.io.json import json_normalize
 
 class SequelizeToExcel(object):
+
+    def __init__(self,node_model_filename=None):
+        self.node_model_filename = node_model_filename
+
     """ 
         This module will help you extract info from your standard 
         sequelize file to excel format , consisiting column name , field name ,
@@ -43,7 +47,8 @@ class SequelizeToExcel(object):
         """
         try:
             # request for filename
-            filename = input("pls enter the filename w/o extn :-> ")
+            if self.node_model_filename == None:
+                filename = input("pls enter the filename w/o extn :-> ")
             # Reads the file
             f = open(filename+".js","r")
 

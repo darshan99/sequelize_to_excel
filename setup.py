@@ -6,7 +6,7 @@ with open("README.rst", "r") as fh:
 
 setup(
     name='sequelize_to_excel',
-    version='1.0.5',
+    version='1.0.6',
     py_modules=['sequelize_to_excel'],
     author='Darshan Bharat',
     author_email='mailshahdarshan@gmail.com',
