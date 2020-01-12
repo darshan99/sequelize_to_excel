@@ -49,6 +49,8 @@ class SequelizeToExcel(object):
             # request for filename
             if self.node_model_filename == None:
                 filename = input("pls enter the filename w/o extn :-> ")
+            else:
+                filename = self.node_model_filename
             # Reads the file
             f = open(filename+".js","r")
 
