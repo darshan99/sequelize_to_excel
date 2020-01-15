@@ -34,7 +34,7 @@ class SequelizeToExcel(object):
         sequelize file to excel format , consisiting column name , field name ,
         auto increment etc 
     """
-    def extract_and_export(self):
+    def extract_and_export(self,export_type="excel"):
         """ 
             This function accepts filename , removes noise and 
             maps field to columns of excel
@@ -91,8 +91,11 @@ class SequelizeToExcel(object):
                 listColumns.append(jsonObj[1].get("version","na"))
                 listRows.append(listColumns)
 
-            df = pd.DataFrame(listRows,columns=lstColumnHeader)
-            df.to_excel(filename+".xlsx")
+            if export_type == "excel":
+                df = pd.DataFrame(listRows,columns=lstColumnHeader)
+                df.to_excel(filename+".xlsx")
+            else
+                return listRows
         except FileNotFoundError as fe:
             logging.error(" File name passed is not present at the location ",stack_info=True)
         except ValueError as ve:

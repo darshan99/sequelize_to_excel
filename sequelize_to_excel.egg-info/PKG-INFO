@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: sequelize-to-excel
-Version: 1.0.7
+Version: 1.0.9
 Summary: map your sequelize columns to excel
 Home-page: https://github.com/darshan99/sequelize_to_excel
 Author: Darshan Bharat
@@ -15,6 +15,7 @@ Description: # Sequelize to Excel
         
         The excel will help you to have sneak peak of complete file at once , along with the corresponding database field name
         
+        This can also be used as standalone app , as well as library
         
         Installation
         ------------
@@ -32,7 +33,7 @@ Description: # Sequelize to Excel
         .. code-block:: console
         
             from sequelize_to_excel import SequelizeToExcel
-            objSeq = SequelizeToExcel()
+            objSeq = SequelizeToExcel("<filename>")
             objSeq.extract_and_export()
         
         2. you will find the generate excel file in the same folder .
